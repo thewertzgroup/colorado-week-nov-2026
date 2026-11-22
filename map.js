@@ -33,7 +33,7 @@
   line(['union','parker'], C.tue, '7 7');
   line(['welby','westminster','hr','longmont'], C.wed);
   line(['longmont','mead'], C.thu, '7 7');
-  line(['longmont','hr','den'], C.sat);
+  line(['longmont','den','hr'], C.sat);
 
   Object.keys(P).forEach(function(k){
     var p=P[k];
