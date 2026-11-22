@@ -200,8 +200,9 @@ a.plain{color:var(--accent);text-decoration:underline}
 .collage-main,.collage-side figure{margin:0;min-width:0;max-width:100%}
 .collage img{width:100%;max-width:100%;height:auto;object-fit:cover;border-radius:.5rem;display:block}
 .collage-main img{aspect-ratio:3/4}
-.collage-side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.45rem;min-width:0}
+.collage-side{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem;min-width:0}
 .collage-side img{aspect-ratio:1/1;object-position:50% 18%}
+.collage-side img.pic-wide,.person-pic.pic-wide{object-position:50% 40%}
 .collage figcaption{font-size:.78rem;color:var(--muted);margin-top:.25rem}
 @media(min-width:800px){
   .day .collage{height:100%;align-content:start}
