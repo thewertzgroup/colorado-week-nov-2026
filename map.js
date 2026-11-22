@@ -16,7 +16,7 @@
     hr:{ll:[39.53857,-104.97259], n:7, color:C.tue, name:'Highlands Ranch (Preston)', days:'Tue, Wed, Sat · town center, not a home address'},
     longmont:{ll:[40.13988,-105.13259], n:8, color:C.wed, name:'Longmont Residence Inn', days:'Wed–Sat hotel'},
     chautauqua:{ll:[39.99740,-105.28097], n:9, color:C.fri, name:'Chautauqua', days:'Fri daytime · Flatirons walk'},
-    rio:{ll:[40.01682,-105.28081], n:10, color:C.fri, name:'Rio Grande Mexican Restaurant', days:'Fri drinks and dinner · 1101 Walnut St, Boulder'}
+    rio:{ll:[40.01682,-105.28081], n:10, color:C.fri, name:'Rio Grande Mexican Restaurant', days:'Fri 6:00 PM reserved · 1101 Walnut St, Boulder'}
   };
 
   var map=L.map(el,{scrollWheelZoom:false,zoomSnap:0.25,zoomControl:true});
