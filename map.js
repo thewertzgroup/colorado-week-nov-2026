@@ -15,8 +15,8 @@
     westminster:{ll:[39.83665,-105.03720], n:6, color:C.thu, name:'Westminster (parents)', days:'Wed park Sandy’s car · Thu Thanksgiving at Richard and Lynn’s · town center, not a home address'},
     hr:{ll:[39.53857,-104.97259], n:7, color:C.tue, name:'Highlands Ranch (Preston)', days:'Tue, Wed, Sat · town center, not a home address'},
     longmont:{ll:[40.13988,-105.13259], n:8, color:C.wed, name:'Longmont Residence Inn', days:'Wed–Sat hotel'},
-    mead:{ll:[40.23332,-104.99859], n:9, color:C.fri, name:'Mead (Ivan’s family)', days:'Fri walk with Max · town center, not a home address'},
-    boulder:{ll:[40.01789,-105.28004], n:10, color:C.fri, name:'Boulder', days:'Fri optional, if there’s time · downtown / Pearl Street area'}
+    chautauqua:{ll:[39.99740,-105.28097], n:9, color:C.fri, name:'Chautauqua', days:'Fri daytime · Flatirons walk'},
+    rio:{ll:[40.01682,-105.28081], n:10, color:C.fri, name:'Rio Grande Mexican Restaurant', days:'Fri drinks and dinner · 1101 Walnut St, Boulder'}
   };
 
   var map=L.map(el,{scrollWheelZoom:false,zoomSnap:0.25,zoomControl:true});
@@ -34,8 +34,8 @@
   line(['union','parker'], C.tue, '7 7');
   line(['welby','westminster','hr','longmont'], C.wed);
   line(['longmont','westminster'], C.thu);
-  line(['longmont','mead'], C.fri);
-  line(['mead','boulder'], C.fri, '7 7');
+  line(['longmont','chautauqua'], C.fri, '7 7');
+  line(['longmont','rio'], C.fri);
   line(['longmont','den','hr'], C.sat);
 
   Object.keys(P).forEach(function(k){
@@ -53,7 +53,7 @@
   });
 
   var south=['den','northglenn','union','parker','welby','westminster','hr'];
-  var north=['westminster','longmont','mead','boulder'];
+  var north=['westminster','longmont','chautauqua','rio'];
   function bounds(keys){return keys.map(function(k){return P[k].ll;});}
   function all(){map.fitBounds(bounds(Object.keys(P)),{padding:[28,28],maxZoom:10});}
   function zoomSouth(){map.fitBounds(bounds(south),{padding:[28,28],maxZoom:11});}
