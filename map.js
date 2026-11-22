@@ -4,7 +4,7 @@
   /* Public businesses use the listed place. Private homes are town centroids only — never a house. */
   var C={
     mon:'#38bdf8', tue:'#a78bfa', wed:'#fbbf24',
-    thu:'#f472b6', sat:'#fb923c'
+    thu:'#f472b6', fri:'#34d399', sat:'#fb923c'
   };
   var P={
     den:{ll:[39.86067,-104.68537], n:1, color:C.mon, name:'DEN airport', days:'Mon arrival, Sat departure'},
@@ -12,10 +12,11 @@
     union:{ll:[39.75363,-105.00075], n:3, color:C.tue, name:'Union Station', days:'Tue · Sandy’s Zephyr'},
     parker:{ll:[39.51914,-104.76960], n:4, color:C.tue, name:'Parker · Bread & Butters', days:'Tue breakfast at 9:00 AM · 18901 Mainstreet'},
     welby:{ll:[39.83271,-104.97442], n:5, color:C.wed, name:'Welby · Gem Industries', days:'Wed 9:30–11:30 AM · John’s shop, then breakfast'},
-    westminster:{ll:[39.83665,-105.03720], n:6, color:C.wed, name:'Westminster (parents)', days:'Wed, maybe Thu · town center, not a home address'},
+    westminster:{ll:[39.83665,-105.03720], n:6, color:C.thu, name:'Westminster (parents)', days:'Wed park Sandy’s car · Thu Thanksgiving at Richard and Lynn’s · town center, not a home address'},
     hr:{ll:[39.53857,-104.97259], n:7, color:C.tue, name:'Highlands Ranch (Preston)', days:'Tue, Wed, Sat · town center, not a home address'},
     longmont:{ll:[40.13988,-105.13259], n:8, color:C.wed, name:'Longmont Residence Inn', days:'Wed–Sat hotel'},
-    mead:{ll:[40.23332,-104.99859], n:9, color:C.thu, name:'Mead (Ivan’s family)', days:'Thu · town center, not a home address'}
+    mead:{ll:[40.23332,-104.99859], n:9, color:C.fri, name:'Mead (Ivan’s family)', days:'Fri walk with Max · town center, not a home address'},
+    boulder:{ll:[40.01789,-105.28004], n:10, color:C.fri, name:'Boulder', days:'Fri optional, if there’s time · downtown / Pearl Street area'}
   };
 
   var map=L.map(el,{scrollWheelZoom:false,zoomSnap:0.25,zoomControl:true});
@@ -32,7 +33,9 @@
   line(['northglenn','parker','hr'], C.tue);
   line(['union','parker'], C.tue, '7 7');
   line(['welby','westminster','hr','longmont'], C.wed);
-  line(['longmont','mead'], C.thu, '7 7');
+  line(['longmont','westminster'], C.thu);
+  line(['longmont','mead'], C.fri);
+  line(['mead','boulder'], C.fri, '7 7');
   line(['longmont','den','hr'], C.sat);
 
   Object.keys(P).forEach(function(k){
@@ -50,7 +53,7 @@
   });
 
   var south=['den','northglenn','union','parker','welby','westminster','hr'];
-  var north=['westminster','longmont','mead'];
+  var north=['westminster','longmont','mead','boulder'];
   function bounds(keys){return keys.map(function(k){return P[k].ll;});}
   function all(){map.fitBounds(bounds(Object.keys(P)),{padding:[28,28],maxZoom:10});}
   function zoomSouth(){map.fitBounds(bounds(south),{padding:[28,28],maxZoom:11});}
