@@ -8,11 +8,11 @@
   };
   var P={
     den:{ll:[39.86067,-104.68537], n:1, color:C.mon, name:'DEN airport', days:'Mon arrival, Sat departure'},
-    northglenn:{ll:[39.91009,-104.98755], n:2, color:C.mon, name:'Northglenn (Sandy)', days:'Mon–Tue · town center, not a home address'},
+    northglenn:{ll:[39.91009,-104.98755], n:2, color:C.mon, name:'Northglenn (Sandy)', days:'Mon–Tue · Wed park Sandy’s car · town center, not a home address'},
     union:{ll:[39.75363,-105.00075], n:3, color:C.tue, name:'Union Station', days:'Tue · Sandy’s Zephyr'},
     parker:{ll:[39.51914,-104.76960], n:4, color:C.tue, name:'Parker · Bread & Butters', days:'Tue breakfast at 9:00 AM · 18901 Mainstreet'},
     welby:{ll:[39.83271,-104.97442], n:5, color:C.wed, name:'Welby · Gem Industries', days:'Wed 9:30–11:30 AM · John’s shop, then breakfast'},
-    westminster:{ll:[39.83665,-105.03720], n:6, color:C.thu, name:'Westminster (parents)', days:'Wed park Sandy’s car · Thu Thanksgiving at Richard and Lynn’s · town center, not a home address'},
+    westminster:{ll:[39.83665,-105.03720], n:6, color:C.thu, name:'Westminster (parents)', days:'Thu Thanksgiving at Richard and Lynn’s · town center, not a home address'},
     hr:{ll:[39.53857,-104.97259], n:7, color:C.tue, name:'Highlands Ranch (Preston)', days:'Tue, Wed, Sat · town center, not a home address'},
     longmont:{ll:[40.13988,-105.13259], n:8, color:C.wed, name:'Longmont Residence Inn', days:'Wed–Sat hotel'},
     chautauqua:{ll:[39.99740,-105.28097], n:9, color:C.fri, name:'Chautauqua', days:'Fri daytime · Flatirons walk'},
@@ -32,7 +32,7 @@
   line(['den','northglenn'], C.mon);
   line(['northglenn','parker','hr'], C.tue);
   line(['union','parker'], C.tue, '7 7');
-  line(['welby','westminster','hr','longmont'], C.wed);
+  line(['welby','northglenn','hr','longmont'], C.wed);
   line(['longmont','westminster'], C.thu);
   line(['longmont','chautauqua'], C.fri, '7 7');
   line(['longmont','rio'], C.fri);
