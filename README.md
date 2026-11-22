@@ -1,4 +1,4 @@
-# Colorado week · November 2026
+# Christoph in Colorado
 
 Draft plan for Christoph’s week in Colorado, Monday, November 23 – Saturday, November 28, 2026.
 
