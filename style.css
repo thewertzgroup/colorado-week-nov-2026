@@ -168,7 +168,9 @@ a.plain{color:var(--accent);text-decoration:underline}
 .day-body,.panel,.people,.person,.timeline,.opts,.opt,section,.summary,.stat{min-width:0;max-width:100%}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:.3rem 0}
 .sched,.mini{max-width:100%}
-.sched th,.sched td,.mini th,.mini td{overflow-wrap:anywhere}
+h1,h2,h3,h4,.stat span,.opt-body h3{overflow-wrap:normal;word-break:normal;hyphens:none}
+.sched th{overflow-wrap:normal;word-break:normal;hyphens:none}
+.sched td,.mini th,.mini td{overflow-wrap:anywhere}
 @media(max-width:700px){
   .sched,.sched tbody,.sched tr,.mini,.mini tbody,.mini tr{display:block;width:100%}
   .sched th,.sched td,.mini th,.mini td{display:block;width:100%;max-width:100%}
@@ -185,9 +187,15 @@ a.plain{color:var(--accent);text-decoration:underline}
 /* photos + people */
 .hero{min-height:min(52svh,520px)}
 .media.portrait>img{object-position:50% 18%}
-.person{display:flex;gap:.75rem;align-items:flex-start}
-.person-pic{width:88px;height:88px;object-fit:cover;object-position:50% 18%;border-radius:.6rem;flex:none;aspect-ratio:1/1}
-.person .person-copy{min-width:0;flex:1}
+.person{display:flex;flex-direction:column;gap:.55rem;align-items:stretch}
+.person h3,.person .person-copy h3{display:block;width:100%;max-width:100%;margin:0 0 .25rem;overflow-wrap:normal;word-break:normal;hyphens:none}
+.person>p,.person .person-copy p{margin:0}
+.person-pic{width:88px;height:88px;max-width:100%;object-fit:cover;object-position:50% 18%;border-radius:.6rem;flex:none;aspect-ratio:1/1}
+.person .person-copy{min-width:0;width:100%}
+@media(min-width:700px){
+  .person:has(>.person-pic){flex-direction:row;align-items:flex-start;gap:.75rem}
+  .person:has(>.person-pic) .person-copy{flex:1;min-width:12rem;width:auto}
+}
 .family-pics{display:flex;gap:.5rem;margin:.75rem 0 0;flex-wrap:wrap}
 .family-pics figure{margin:0;width:calc(50% - .25rem);max-width:160px;min-width:0}
 .family-pics img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%;border-radius:.5rem}
