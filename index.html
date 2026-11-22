@@ -11,6 +11,7 @@
 <title>Christoph in Colorado</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 </head>
 <body>
 <header class="hero">
@@ -27,6 +28,7 @@
 <nav class="toc" aria-label="Sections">
   <a href="#overview">Overview</a>
   <a href="#plan">Day by day</a>
+  <a href="#map">Map</a>
   <a href="#people">People</a>
   <a href="#flights">Flights</a>
   <a href="#logistics">Logistics</a>
@@ -45,7 +47,7 @@
 <section class="panel">
   <p class="kicker">The idea</p>
   <h2>Overview</h2>
-  <p>Christoph flies into DEN at noon on Monday. Sandy (Jenn’s mom) picks him up and he keeps her car for the week. The working assumption is that he stays with her in Northglenn Monday night, but that isn’t confirmed. Tuesday morning he gets her to Union Station for the Grand Junction train, then meets Aunt Linda in Parker for breakfast or lunch, with Preston time afterward in nearby Highlands Ranch. Wednesday he meets John at Gem Industries in Welby, then they have breakfast nearby, then he parks Sandy’s car at Lynn’s in Westminster and drives with her to pick up Preston and Dexter in Highlands Ranch, arriving at the Longmont Residence Inn at 3:00 PM. Thursday is Thanksgiving with his parents and with Ivan’s family in Mead, right by Longmont. Friday is open time with Preston. Saturday they come back down, then Christoph flies SJC at 11:00 AM MT.</p>
+  <p>Christoph flies into DEN at noon on Monday. Sandy (Jenn’s mom) picks him up and he keeps her car for the week. The working assumption is that he stays with her in Northglenn Monday night, but that isn’t confirmed. Tuesday morning he gets her to Union Station for the Grand Junction train, then meets Aunt Linda for breakfast at Bread &amp; Butters in Parker, with Preston time afterward in nearby Highlands Ranch. Wednesday he meets John at Gem Industries in Welby, then they have breakfast nearby, then he parks Sandy’s car at Lynn’s in Westminster and drives with her to pick up Preston and Dexter in Highlands Ranch, arriving at the Longmont Residence Inn at 3:00 PM. Thursday is Thanksgiving with his parents and with Ivan’s family in Mead, right by Longmont. Friday is open time with Preston. Saturday they come back down, then Christoph flies SJC at 11:00 AM MT.</p>
   <p class="muted">Times below are Mountain Time unless a flight’s Pacific Time is also noted. Drive times are estimates without traffic and can change. Private addresses are left off this page.</p>
 </section>
 
@@ -81,33 +83,21 @@
           <tr><th>Suggested drop</th><td>From Northglenn, RTD’s N Line is the natural rail option. Both nearby stations are a short hop: Eastlake/124th is about 4 minutes from Sandy’s, and Northglenn/112th is about 5 minutes. They are the same train, three minutes apart.</td></tr>
           <tr><th>7:00 AM</th><td>Leave Northglenn. Aim for the <b>7:13 AM MT</b> N Line at Eastlake/124th, or the same train at <b>7:16 AM</b> at Northglenn/112th. It is scheduled to arrive at Union Station at <b>7:42 AM</b>, about an hour before the Zephyr. A tighter backup is the 7:43/7:46 train, arriving 8:12 AM. Do not take the 8:13/8:16 train — it arrives at 8:42 AM, too late.</td></tr>
           <tr><th>Or drive her</th><td>Driving Sandy all the way to Union Station is about 22 minutes without traffic, or closer to 30–40 minutes in a Tuesday morning rush. Leave by about 7:15–7:20 AM to be there around 8:00. This is simpler if she has bags; the N Line is more predictable in traffic.</td></tr>
-          <tr><th>Breakfast or lunch</th><td>Aunt Linda in the Parker area — they’ll probably meet at a restaurant, not at her house. After a 7:16 drop, Parker is about 50–55 minutes from Northglenn, so breakfast is the natural fit (arriving around 8:30–9:00). After a drive to Union Station, Parker is about 35 minutes from downtown. Three options are below. Nothing is booked.</td></tr>
+          <tr><th>Breakfast</th><td><b>Bread &amp; Butters</b> with Aunt Linda, confirmed. 18901 Mainstreet, Parker (Parker and Mainstreet). Open Tuesday 6:30 AM–1:30 PM. After the 7:13 AM N Line drop, it’s about 50 minutes without traffic from the Northglenn area (allow 60–70 on a Tuesday morning). If you drive Sandy to Union Station (there around 8:00), it’s about 35 minutes without traffic (allow 45–55 in rush), arriving around 8:45–9:15. <b>Proposed time: 9:15 AM MT</b> — that works for both paths. After the N Line drop, leaving around 8:00 still gets you there comfortably; leaving right after 7:13 may land you early.</td></tr>
           <tr><th>Afternoon / evening</th><td>Preston time in Highlands Ranch, about 25 minutes from Parker.</td></tr>
         </table>
         </div>
         <div class="opts" style="margin-top:1rem">
-          <article class="opt">
+          <article class="opt pick">
             <div class="opt-body">
-              <h3>The Perfect Time Cafe</h3>
-              <p>Well-rated American breakfast and lunch in Parker. Open Tuesday 7:00 AM–9:00 PM, so it works for either meal.</p>
-              <p class="links"><a class="btn" href="https://www.perfecttimecafe.com/">perfecttimecafe.com</a></p>
-            </div>
-          </article>
-          <article class="opt">
-            <div class="opt-body">
-              <h3>Stonegate Cafe</h3>
-              <p>A Parker staple for omelets, cinnamon rolls, and other breakfast-and-lunch plates. Open 7:00 AM–2:00 PM daily.</p>
-              <p class="links"><a class="btn" href="https://www.thestonegatecafe.com/">thestonegatecafe.com</a></p>
-            </div>
-          </article>
-          <article class="opt">
-            <div class="opt-body">
-              <h3>Doug’s Diner</h3>
-              <p>Scratch-made diner breakfast and lunch on Mainstreet in Parker. Weekdays 6:00 AM–2:30 PM.</p>
-              <p class="links"><a class="btn" href="https://www.dougsdiner.com/locations/">dougsdiner.com</a></p>
+              <span class="tag">Tuesday breakfast · confirmed</span>
+              <h3>Bread &amp; Butters</h3>
+              <p>18901 Mainstreet, Parker, CO 80134. Breakfast and brunch. Open Tuesday 6:30 AM–1:30 PM.</p>
+              <p class="links"><a class="btn" href="https://breadandbuttersparker.com/">breadandbuttersparker.com</a> <a class="btn" href="https://breadandbuttersparker.com/menu/food-menu/">Food menu</a></p>
             </div>
           </article>
         </div>
+        <p class="muted">If plans change, other Parker spots include <a href="https://www.perfecttimecafe.com/">The Perfect Time Cafe</a>, <a href="https://www.thestonegatecafe.com/">Stonegate Cafe</a>, and <a href="https://www.dougsdiner.com/locations/">Doug’s Diner</a>.</p>
       </div>
     </article>
 
@@ -216,6 +206,37 @@
   </div>
 </section>
 
+<section id="map" class="panel">
+  <p class="kicker">Front Range</p>
+  <h2>Map</h2>
+  <p class="muted">Pins are numbered in rough week order and colored by day. Private homes sit at the town center, not the house. Bread &amp; Butters, Gem Industries, the Longmont hotel, Union Station, and DEN are the public places.</p>
+  <div class="map-toggle" role="group" aria-label="Map view">
+    <button type="button" id="zoom-all" aria-pressed="true">Whole week</button>
+    <button type="button" id="zoom-south" aria-pressed="false">South</button>
+    <button type="button" id="zoom-north" aria-pressed="false">North</button>
+  </div>
+  <div id="leaflet" role="img" aria-label="Map of the Colorado week, with numbered pins"></div>
+  <p class="map-legend">
+    <span><span class="sw mon"></span> Mon</span>
+    <span><span class="sw tue"></span> Tue</span>
+    <span><span class="sw wed"></span> Wed</span>
+    <span><span class="sw thu"></span> Thu</span>
+    <span><span class="sw sat"></span> Sat</span>
+    <span><span class="sw tue dash"></span> optional drive (Union Station → Parker)</span>
+  </p>
+  <ol class="pin-key">
+    <li><span class="pin-n" style="background:#38bdf8">1</span>DEN airport · Mon, Sat</li>
+    <li><span class="pin-n" style="background:#38bdf8">2</span>Northglenn (Sandy) · town center · Mon–Tue</li>
+    <li><span class="pin-n" style="background:#a78bfa">3</span>Union Station · Tue</li>
+    <li><span class="pin-n" style="background:#a78bfa">4</span>Parker · Bread &amp; Butters · Tue</li>
+    <li><span class="pin-n" style="background:#fbbf24">5</span>Welby · Gem Industries · Wed</li>
+    <li><span class="pin-n" style="background:#fbbf24">6</span>Westminster (parents) · town center · Wed</li>
+    <li><span class="pin-n" style="background:#a78bfa">7</span>Highlands Ranch (Preston) · town center · Tue, Wed, Sat</li>
+    <li><span class="pin-n" style="background:#fbbf24">8</span>Longmont Residence Inn · Wed–Sat</li>
+    <li><span class="pin-n" style="background:#f472b6">9</span>Mead (Ivan’s family) · town center · Thu</li>
+  </ol>
+</section>
+
 <section id="people">
   <p class="kicker">Who this week is for</p>
   <h2>People</h2>
@@ -237,7 +258,7 @@
     </div>
     <div class="person">
       <h3>Aunt Linda</h3>
-      <p>In Parker, near Highlands Ranch. Tuesday breakfast or lunch in the Parker area, probably at a restaurant rather than at her house. Time and which spot are still TBD.</p>
+      <p>In Parker, near Highlands Ranch. Tuesday breakfast at Bread &amp; Butters, 18901 Mainstreet, proposed for 9:15 AM MT.</p>
     </div>
     <div class="person">
       <h3>John Nelson</h3>
@@ -358,7 +379,8 @@
       <tr><td>Northglenn → Westminster</td><td>~25 min</td></tr>
       <tr><td>Northglenn → Welby (shop)</td><td>~20 min</td></tr>
       <tr><td>Welby → Westminster</td><td>~25 min</td></tr>
-      <tr><td>Northglenn → Parker</td><td>~55 min</td></tr>
+      <tr><td>Northglenn → Parker (Bread &amp; Butters)</td><td>~50 min (allow 60–70 in rush hour)</td></tr>
+      <tr><td>Union Station → Parker</td><td>~35 min (allow 45–55 in rush hour)</td></tr>
       <tr><td>Parker → Highlands Ranch</td><td>~25 min</td></tr>
       <tr><td>Westminster → Highlands Ranch</td><td>~50 min</td></tr>
       <tr><td>Highlands Ranch → Longmont</td><td>~70 min</td></tr>
@@ -380,14 +402,14 @@
     <li><b>Where does Christoph sleep Monday and Tuesday nights?</b> Monday at Sandy’s in Northglenn is the working assumption, not a confirmation. Tuesday night matters: starting Wednesday already in Westminster avoids an extra south-to-north trip before picking up Preston.</li>
     <li><b>What time is the meet at John’s shop on Wednesday?</b> Gem Industries in Welby, then breakfast nearby, then Westminster, Highlands Ranch, and the Longmont Residence Inn at 3:00 PM. Leaving the shop area by about 11:45 AM leaves a comfortable cushion.</li>
     <li><b>Thanksgiving:</b> Mead (Ivan and Tara, about 25 minutes from the hotel), Westminster (Richard and Lynn, about 35 minutes), or somewhere else? And should the 5:00 PM MT FRD Checks hold be skipped this week?</li>
-    <li><b>Linda in Parker:</b> breakfast or lunch, and which spot — The Perfect Time Cafe, Stonegate Cafe, Doug’s Diner, or somewhere she prefers?</li>
+    <li><b>Does 9:15 AM MT work for Linda at Bread &amp; Butters on Tuesday?</b> After the Sandy drop, that time fits both the N Line path and driving her to Union Station.</li>
   </ol>
 </section>
 
 </main>
 
 <footer class="foot">
-  <p>Found by Grok Bot on November 22, 2026, from Christoph’s calendars, Southwest and Marriott confirmation emails, Amtrak’s California Zephyr timetable, RTD’s N Line schedule, and the restaurants’ own sites. This is a draft. Flight, train, and bus times can change. Drive times are without traffic and can change.</p>
+  <p>Found by Grok Bot on November 22, 2026, from Christoph’s calendars, Southwest and Marriott confirmation emails, Amtrak’s California Zephyr timetable, RTD’s N Line schedule, and the restaurants’ own sites, including Bread &amp; Butters. This is a draft. Flight, train, and bus times can change. Drive times are without traffic and can change.</p>
   <p>Photo credits</p>
   <ul class="credits">
     <li>Hero: <a href="https://commons.wikimedia.org/wiki/File:Flatirons_Winter_Sunrise_edit_2.jpg">The Flatirons in winter sunrise</a> by Jesse Varner, edited by AzaToth, <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>, via Wikimedia Commons.</li>
@@ -397,6 +419,9 @@
     <li>Thursday and People: Erik, Kira, and Max (group photo and individual shots) provided by Christoph.</li>
     <li>Friday: <a href="https://commons.wikimedia.org/wiki/File:Paragon_Estates_open-space_path_at_Vaquero_Drive_with_Flatirons,_Boulder_County,_Colorado,_USA_-_2025.jpg">Open-space path toward the Flatirons, Boulder County</a> by Mikepascoe, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via Wikimedia Commons.</li>
   </ul>
+  <p>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>. Private homes are shown at the town center only.</p>
 </footer>
+<script src="vendor/leaflet/leaflet.js" defer></script>
+<script src="map.js" defer></script>
 </body>
 </html>
