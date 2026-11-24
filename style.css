@@ -252,3 +252,17 @@ h1,h2,h3,h4,.stat span,.opt-body h3{overflow-wrap:normal;word-break:normal;hyphe
 @media(min-width:700px){.pin-key{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .pin-key li{min-width:0;overflow-wrap:anywhere}
 .pin-n{display:inline-flex;align-items:center;justify-content:center;width:1.15rem;height:1.15rem;border-radius:999px;color:#0b1220;font-weight:700;font-size:.72rem;margin-right:.35rem;vertical-align:middle}
+
+/* completed plan items — add class="done" to a schedule row or .is-done to a day card */
+.badge.done{background:rgba(52,211,153,.16);color:#6ee7b7;border:1px solid rgba(52,211,153,.45);font-weight:700}
+.badge.done::before{content:"✓\00a0"}
+.badge.next{background:rgba(56,189,248,.16);color:#7dd3fc;border:1px solid rgba(56,189,248,.45);font-weight:700}
+.date .badge{margin-left:.4rem;vertical-align:middle}
+.day.is-done .date{display:flex;flex-wrap:wrap;align-items:center;gap:.2rem}
+.sched tr.done th,.sched tr.done td,.mini tr.done td{color:var(--muted)}
+.sched tr.done td,.mini tr.done td{text-decoration:line-through;text-decoration-color:rgba(156,163,175,.5);text-decoration-thickness:1px}
+.sched tr.done th::before{content:"✓\00a0";color:#34d399;font-weight:700}
+.sched tr.done a{color:#7dd3fc;text-decoration:underline;text-decoration-color:currentColor}
+.sched tr.done .badge,.mini tr.done .badge{text-decoration:none;display:inline-block}
+.sched tr.up-next th{color:var(--accent)}
+.sched tr.up-next td{border-radius:.35rem}
